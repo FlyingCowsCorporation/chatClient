@@ -14,15 +14,15 @@ public class Login {
 
     private JFrame logInFrame = new JFrame();
     private JPanel logInPanel = new JPanel();
-    private JLabel loginName = new JLabel("User name:");
-    private JLabel serverName = new JLabel("Server:");
+    private JLabel loginNameLabel = new JLabel("User name:");
+    private JLabel serverNameLabel = new JLabel("Server:");
     private JTextField userNameField = new JTextField();
     private JTextField serverField = new JTextField("http://geluk.io:15000/messages");
     private JButton logInButton = new JButton("Log in");
 
     public void createLogInFrame(){
         logInFrame.setTitle("Chat app");
-        logInFrame.setSize(250,200);
+        logInFrame.setSize(250,240);
         logInFrame.setLocation(200, 300);
         logInFrame.setVisible(true);
         logInFrame.setBackground(Color.GRAY);
@@ -55,7 +55,9 @@ public class Login {
             logIn(userName);
         });
 
+        logInPanel.add(loginNameLabel);
         logInPanel.add(userNameField);
+        logInPanel.add(serverNameLabel);
         logInPanel.add(serverField);
         logInPanel.add(logInButton);
         logInFrame.getContentPane().add(logInPanel);
