@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,9 +8,10 @@ import java.net.URL;
 
 public class MessageHandler {
 
+    //////////////////http/////////////////
     private static final String USER_AGENT = "Chat Client";
-    public static String GET_URL = "http://geluk.io:15000/messages";
-    public static String POST_URL = "http://geluk.io:15000/messages";
+    public static String GET_URL = "";
+    public static String POST_URL = "";
 
     public void Send(String msg) throws IOException{
         URL obj = new URL(POST_URL);
@@ -54,6 +56,7 @@ public class MessageHandler {
             in.close();
             // print result
             String msg = response.toString();
+            System.out.println("Message revieved: "+msg);
             return msg;
         } else {
             System.out.println("GET request not worked");
