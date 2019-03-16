@@ -17,7 +17,7 @@ public class Login {
     private JLabel loginNameLabel = new JLabel("User name:");
     private JLabel serverNameLabel = new JLabel("Server:");
     private JTextField userNameField = new JTextField();
-    private JTextField serverField = new JTextField("http://geluk.io:15000/messages");
+    private JTextField serverField = new JTextField("http://178.128.241.90:15000/messages");
     private JButton logInButton = new JButton("Log in");
 
     public void createLogInFrame(){
